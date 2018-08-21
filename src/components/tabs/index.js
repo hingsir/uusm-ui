@@ -46,4 +46,6 @@ registerJQueryPlugin('tabs', function(options){
   new Tabs(options)
 })
 
-export default Tabs
+export {
+  Tabs
+}

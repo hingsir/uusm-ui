@@ -117,4 +117,6 @@ registerJQueryPlugin('condition', function(options){
   new Condition(options)
 })
 
-export default Condition
+export {
+  Condition
+}

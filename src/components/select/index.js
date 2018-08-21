@@ -83,4 +83,6 @@ registerJQueryPlugin('select', function(options){
   new Select(options)
 })
 
-export default Select
+export {
+  Select
+}

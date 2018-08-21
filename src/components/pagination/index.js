@@ -139,4 +139,6 @@ registerJQueryPlugin('pagination', function(options){
   new Pagination(options)
 })
 
-export default Pagination
+export {
+  Pagination
+}
