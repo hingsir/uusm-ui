@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>uusm-ui</title>
+  <link rel="stylesheet" href="http://172.30.67.148:9800/WEB/resource/css/style.css">
+  <style>
+    hr{
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <ul id="tabs" class="uusm-ui-tabs">
+    <li data-target="#target-a"><a href="javascript:;">tab A</a></li>
+    <li data-target="#target-b"><a href="javascript:;">tab B</a></li>
+    <li data-target="#target-c"><a href="javascript:;">tab C</a></li>
+  </ul>
+  <div id="target-a">target A</div>
+  <div id="target-b">target B</div>
+  <div id="target-c">target C</div>
+  <hr>
+  <ul id="tabs2" class="uusm-ui-tabs">
+    <li data-target="#target2-a"><a href="javascript:;">tab2 A</a></li>
+    <li data-target="#target2-b"><a href="javascript:;">tab2 B</a></li>
+    <li data-target="#target2-c"><a href="javascript:;">tab2 C</a></li>
+  </ul>
+  <div id="target2-a">target2 A</div>
+  <div id="target2-b">target2 B</div>
+  <div id="target2-c">target2 C</div>
+  <hr>
+  <div id="pagination"></div>
+
+  <hr>
+  <div id="select" style="width: 200px;"></div>
+  <hr>
+  <div class="uusm-ui-condition">
+    <div class="condition-item multiple">
+      <dl>
+        <dt>主要投资策略：</dt>
+        <dd>
+          <ul>
+            <li data-value="1" class="active"><a href="javascript:;">全部</a></li>
+            <li data-value="2"><a href="javascript:;">股票策略</a></li>
+            <li data-value="3"><a href="javascript:;">宏观策略</a></li>
+            <li data-value="4"><a href="javascript:;">复合策略</a></li>
+            <li data-value="5"><a href="javascript:;">相对价值</a></li>
+            <li data-value="6"><a href="javascript:;">管理期货</a></li>
+            <li data-value="7"><a href="javascript:;">事件驱动</a></li>
+            <li data-value="8"><a href="javascript:;">组合基金</a></li>
+            <li data-value="9"><a href="javascript:;">债券策略</a></li>
+            <li data-value="10"><a href="javascript:;">现金管理</a></li>
+            <li data-value="11"><a href="javascript:;">其他策略</a></li>
+          </ul>
+          <a href="javascript:;" class="uusm-ui-button btn-white btn-multiple">多选</a>
+        </dd>
+      </dl>
+
+    </div>
+    <div class="condition-item multiple">
+      <dl>
+        <dt>从业年限：</dt>
+        <dd>
+          <ul>
+            <li data-value="1" class="active"><a href="javascript:;">全部</a></li>
+            <li data-value="2"><a href="javascript:;">0-1年</a></li>
+            <li data-value="3"><a href="javascript:;">1-3年</a></li>
+            <li data-value="4"><a href="javascript:;">3-5年</a></li>
+            <li data-value="5"><a href="javascript:;">5-10年</a></li>
+            <li data-value="6"><a href="javascript:;">10年以上</a></li>
+          </ul>
+          <a href="javascript:;" class="uusm-ui-button btn-white btn-multiple">多选</a>
+        </dd>
+      </dl>
+      <div class="multiple-operate">
+        <a href="javascript:;" class="uusm-ui-button btn-cancel">取消</a>
+        <a href="javascript:;" class="uusm-ui-button btn-gray btn-confirm">提交</a>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script src="../dist/test.js"></script>
+</body>
+</html>
