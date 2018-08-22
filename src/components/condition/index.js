@@ -75,7 +75,11 @@ Condition.prototype.bindEvent = function(){
       values.push($item.data('value'))
       texts.push($item.find('a').text())
     })
-    $parent.find('dd').prepend(`<div class="selected-texts">${texts.join('、')}<a href="javascript:;" class="btn-clear">&times;</a></div>`)
+    var $selectedText = $parent.find('.selected-texts')
+    if($selectedText.length === 0){
+      $selectedText = $(`<div class="selected-texts"></div>`).appendTo($parent.find('dd'))
+    }
+    $selectedText.html(`${texts.join('、')}<a href="javascript:;" class="btn-clear">&times;</a>`).show()
     $parent.find('ul').hide()
     onSelect.call(null, values)
   })
@@ -83,7 +87,7 @@ Condition.prototype.bindEvent = function(){
   $dom.on('click', '.btn-clear', function(e){
     let $self = $(e.currentTarget)
     let $parent = $self.parents('.condition-item')
-    $self.parent().remove()
+    $self.parent().hide()
     $parent.find('ul').show()
     $parent.find('li').removeClass('active')
     // $parent.find('li[data-actived]').addClass('active')
