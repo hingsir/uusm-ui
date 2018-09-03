@@ -43,6 +43,7 @@ $('#select').select({
     'cp': '产品',
     'jl': '经理'
   },
+  defaultValue: 'cp',
   eventName: 'mouseover',
   onSelect: function(value, el){
     console.log(value, el)

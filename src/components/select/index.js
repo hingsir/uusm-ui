@@ -30,7 +30,7 @@ const Select = function(options = {}){
 Select.prototype.render = function(){
   let {dom, defaultValue, items} = this.options
   let $dom = $(dom)
-  let text = defaultValue
+  let text = items[defaultValue]
   if(!defaultValue){
     for(let key in items){
       this.options.defaultValue = key

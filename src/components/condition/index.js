@@ -41,16 +41,21 @@ Condition.prototype.bindEvent = function(){
     }
     $parent.find('.selected-texts').remove()
     $parent.find('ul').show()
+    let isFirst = true
     $parent.find('li').each(function(index, item){
       let $item = $(item)
       let $check = $item.find('i')
       if(!$check.length){
         $check = $('<i/>').prependTo($item)
       }
-      if($item.hasClass('active')){
+      if($item.hasClass('active') && isFirst){
         $item.attr('data-actived', 1)
+        isFirst = false
       }
     })
+    if(!$parent.find('li.active').length){
+      $parent.find('.btn-confirm').addClass('disabled')
+    }
     $parent.addClass('expanded')
   })
 
@@ -59,7 +64,7 @@ Condition.prototype.bindEvent = function(){
     let $parent = $self.parents('.condition-item')
     $parent.find('li').removeClass('active')
     $parent.removeClass('expanded')
-    $parent.find('li[data-actived]').addClass('active')
+    //$parent.find('li[data-actived]').addClass('active')
   })
 
   $dom.on('click', '.btn-confirm', function(e){
@@ -90,7 +95,7 @@ Condition.prototype.bindEvent = function(){
     $self.parent().hide()
     $parent.find('ul').show()
     $parent.find('li').removeClass('active')
-    // $parent.find('li[data-actived]').addClass('active')
+    //$parent.find('li[data-actived]').addClass('active')
     onSelect.call(null, [])
   })
 
