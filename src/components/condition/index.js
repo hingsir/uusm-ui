@@ -86,6 +86,7 @@ Condition.prototype.bindEvent = function(){
     }
     $selectedText.html(`${texts.join('、')}<a href="javascript:;" class="btn-clear">&times;</a>`).show()
     $parent.find('ul').hide()
+    $parent.find('.btn-multiple').hide()
     onSelect.call(null, values)
   })
 
@@ -94,6 +95,7 @@ Condition.prototype.bindEvent = function(){
     let $parent = $self.parents('.condition-item')
     $self.parent().hide()
     $parent.find('ul').show()
+    $parent.find('.btn-multiple').show()
     $parent.find('li').removeClass('active')
     //$parent.find('li[data-actived]').addClass('active')
     onSelect.call(null, [])
